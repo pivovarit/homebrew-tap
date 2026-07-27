@@ -5,21 +5,21 @@
 class Tdocker < Formula
   desc "Minimalistic TUI for Docker"
   homepage "https://github.com/pivovarit/tdocker"
-  version "0.7.1"
+  version "0.7.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.1/tdocker_darwin_amd64.tar.gz"
-      sha256 "16278db60f486eefbe64dbfbbb4d3114624d9a2f360f2f50f90f532e79067ba0"
+      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.2/tdocker_darwin_amd64.tar.gz"
+      sha256 "e6214aa2046296eddc5e98c02cdbbed7cbbd9e29c0f87913dc04c4b5dc3f33f9"
 
       define_method(:install) do
         bin.install "tdocker"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.1/tdocker_darwin_arm64.tar.gz"
-      sha256 "bd76f35aafe7ea74f1e74c5b9a2d20ee6c6e02e1999961d3e82f02dfd3251d09"
+      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.2/tdocker_darwin_arm64.tar.gz"
+      sha256 "020cac96457c46835011c8d3f5f457049c5b458b1ff66456ca8a7a37b73be033"
 
       define_method(:install) do
         bin.install "tdocker"
@@ -29,15 +29,15 @@ class Tdocker < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.1/tdocker_linux_amd64.tar.gz"
-      sha256 "636ac909f7b24ca98521e1c5538891afd5a7674e0f1fefcec7167115aca47935"
+      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.2/tdocker_linux_amd64.tar.gz"
+      sha256 "41c58eae9cb3caa51c7c412b0927efded956e1dcb498355cce79e62e8df710a8"
       define_method(:install) do
         bin.install "tdocker"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.1/tdocker_linux_arm64.tar.gz"
-      sha256 "ce51e8f9c85b4d1915ed608a86f777d7073f61f9f05adac03179283e02641d3d"
+      url "https://github.com/pivovarit/tdocker/releases/download/v0.7.2/tdocker_linux_arm64.tar.gz"
+      sha256 "b1edfe5be4a7fc74e0610332de951de52fdb8777c29e32bb5e38c7c2774743f1"
       define_method(:install) do
         bin.install "tdocker"
       end
